@@ -33,6 +33,7 @@ fn main() {
 
     if env::var("LIBGIT2_SYS_USE_PKG_CONFIG").is_ok() {
         if pkg_config::find_library("libgit2").is_ok() {
+            println!("using pkg config");
             return
         }
     }
